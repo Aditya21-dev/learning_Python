@@ -1,34 +1,39 @@
 # Q2. (Multiple Inheritance + MRO Trap)
 #     Problem:
 #     Output predict karo (most asked)
-# class a:
-#     def show(self):
-#         print("a")
-# class b(a):
-#     def show(self):
-#         print("b")
-# class c:
-#     def show(self):
-#         print("c")
-# class d(b, c):
-#     pass
+class a:
+    def show(self):
+        print("a")
+class b(a):
+    def show(self):
+        print("b")
+class c:
+    def show(self):
+        print("c")
+class d(b, c):
+    pass
 
-# obj1 = d()
-# obj1.show()
+obj1 = d()
+obj1.show()
 
-# ''' MRO :- method resoluton order
-#            iska matlab ye hota hai ki python kis order mein class k methods ko dhundna start karega.
-#            isliliye pahle b pe gya mill gya show function toh b return kar diya..! '''
-
-
+''' MRO :- method resoluton order
+           iska matlab ye hota hai ki python kis order mein class k methods ko dhundna start karega.
+           isliliye pahle b pe gya mill gya show function toh b return kar diya..! '''
 
 
 
 
-from abc import ABC, abstractclassmethod
+
+# Q3. (Abstract Class + Payment System)
+# Problem:
+    # Payment system banao jisme:
+    # abstract method pay()
+    # subclasses: UPI, Card
+    
+from abc import ABC, abstractmethod
 
 class payment(ABC):
-    @abstractclassmethod
+    @abstractmethod
     def pay(self,amount):
         pass
 
@@ -42,4 +47,19 @@ class card(payment):
 
 
 transaction1 = card()
-transaction1.pay(45000)
+transaction1.pay(45000) 
+
+
+
+
+
+class Account:
+    __balance = 0
+    def __init__(self, balance):
+        self.__balance = balance  # private
+
+    def get_balance(self):
+        return self.__balance
+    
+acc = Account(5000)
+print(acc.get_balance())
