@@ -1,18 +1,3 @@
-# def login_required(func):
-#     def wrapper(user):
-#         if user.get("is_logged_in"):
-#             return func(user)
-#         else:
-#             return "Access Denied"
-#     return wrapper
-
-# @login_required
-# def dashboard(user):
-#     return f"Welcome {user['name']}"
-
-# user1 = {"name": "Adi", "is_logged_in": True}
-# print(dashboard(user1))
-
 
 def login_required(fx):
     def wrapper(user):
