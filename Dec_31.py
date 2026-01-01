@@ -53,6 +53,11 @@ transaction1.pay(45000)
 
 
 
+
+# Q4. (Encapsulation + Access Specifier)
+    # Problem:
+    #     Account balance ko secure karo
+
 class Account:
     __balance = 0
     def __init__(self, balance):

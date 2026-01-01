@@ -1,4 +1,3 @@
-
 def login_required(fx):
     def wrapper(user):
         if user.get("is_logged_in"):
