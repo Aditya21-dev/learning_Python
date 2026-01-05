@@ -1,0 +1,120 @@
+{% extends "Base.html" %}
+
+{% load static %}
+
+{% block title %}
+<title> Home </title>
+{% endblock title %}
+
+{% block css %}
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+        background-color: #fff;
+        padding: 40px;
+    }
+
+    /* Section */
+    .menu-section {
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .section-title {
+        font-size: 26px;
+        font-weight: 800;
+        letter-spacing: 1px;
+        margin-bottom: 30px;
+    }
+
+    /* Layout */
+    .menu-layout {
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        gap: 30px;
+    }
+
+    /* Cards */
+    .menu-card {
+        background-color: #f8f7f5;
+        border-radius: 6px;
+        overflow: hidden;
+        text-align: center;
+    }
+
+    .menu-card img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+    }
+
+    .menu-card p {
+        padding: 20px;
+        font-weight: 700;
+        font-size: 14px;
+        letter-spacing: 0.5px;
+    }
+
+    /* Big Card */
+    .big-card img {
+        height: 420px;
+    }
+
+    /* Right Grid */
+    .menu-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+</style>
+{% endblock css %}
+
+{% block content %}
+<section class="menu-section">
+    <h2 class="section-title">BROWSE MENU CATEGORIES</h2>
+
+    <div class="menu-layout">
+
+        <!-- Left Big Card -->
+        <div class="menu-card big-card">
+            <img src="https://images.unsplash.com/photo-1606755962773-d324e0a13086"
+                 alt="Epic Bucket">
+            <p>EPIC BUCKET OF THE DAY</p>
+        </div>
+
+        <!-- Right Grid -->
+        <div class="menu-grid">
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1603064752734-4c48eff53d05"
+                     alt="Gold Edition">
+                <p>GOLD EDITION</p>
+            </div>
+
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092"
+                     alt="Box Meals">
+                <p>BOX MEALS</p>
+            </div>
+
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1606755962773-d324e0a13086"
+                     alt="Variety Buckets">
+                <p>VARIETY BUCKETS</p>
+            </div>
+
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1550547660-d9450f859349"
+                     alt="Veg">
+                <p>VEG</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+{% endblock content %}
