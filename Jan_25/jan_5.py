@@ -29,20 +29,30 @@ from functools import reduce
 
 
 
-add = lambda a,b: a+b
-# print(add(2,4))
+# add = lambda a,b: a+b
+# # print(add(2,4))
 
-li = [1,34,56,6,78]
+# li = [1,34,56,6,78]
 
-print(list(map(lambda x:x*2,li)))
+# print(list(map(lambda x:x*2,li)))
 
-print(list(map(lambda x:x*2 if x%2==0 else 0,li)))
+# print(list(map(lambda x:x*2 if x%2==0 else 0,li)))
 
-print(list)
+# print(list)
 
 
 
-nums = [1, 2,3,4,5,6]
+# nums = [1,2,3,4,5,6]
 
-print(reduce(lambda a, b: a + b, nums))
-# print(result)
+# print(reduce(lambda a, b: a + b, nums))
+# # print(result)
+
+
+
+# nums = [1,2,3,4,5,6]
+
+# l2 = [i if i%2==0 else  for i in range(1,11)]
+# print(l2)
+
+lsi = [ i for i in range(1,6)]
+print(lsi)
