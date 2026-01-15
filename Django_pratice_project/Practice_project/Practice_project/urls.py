@@ -21,4 +21,5 @@ from Practice_app import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home,name='home.html'),
+    path('formdata/',views.frormdata,name='formdata')
 ]
