@@ -55,3 +55,17 @@ except na_balik as e:
 
 
 print("hello")
+
+class Student:
+    def __init__(self, name, marks):
+        self.name = name          # public variable
+        self.__marks = marks      # private variable
+
+    # getter method
+    def get_marks(self):
+        return self.__marks
+
+    # setter method
+    def set_marks(self, marks):
+        if marks >= 0:
+            self.__marks = marks
